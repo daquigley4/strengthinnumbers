@@ -1,0 +1,20 @@
+{
+  "name": "strength_in_numbers",
+  "description": "",
+  "main": "",
+  "authors": [
+    "David Quigley <daquigley4@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/daquigley4/strengthinnumbers",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.6"
+  }
+}
