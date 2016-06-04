@@ -1,0 +1,7 @@
+<h1>Players</h1>
+
+<ul>
+  <li ng-repeat="player in ctrl.players">
+    <a ng-click="ctrl.goShowPage(player)">{{ player.name }} - {{ player.team }}</a>
+  </li>
+</ul>
