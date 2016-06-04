@@ -16,7 +16,7 @@ angular.module('strengthInNumbers')
       templateUrl: "views/players.html",
       controller: "playersCtrl",
       controllerAs: "ctrl"
-    })
+    });
     // .state('movies-show', {
     //   url: "/movies/:movieId",
     //   templateUrl: "views/movies-show.html",

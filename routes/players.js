@@ -24,3 +24,5 @@ function seedPlayers() {
 }
 
 seedPlayers();
+
+module.exports = router;
