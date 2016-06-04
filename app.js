@@ -8,10 +8,11 @@ var mongoose = require('mongoose');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
+var players = require('./routes/players');
 
 var app = express();
-
 mongoose.connect('mongodb://localhost/strength-in-numbers');
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -27,6 +28,7 @@ app.use(express.static(path.join(__dirname, 'bower_components')));
 
 app.use('/', routes);
 app.use('/users', users);
+app.use('/api/players', players);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

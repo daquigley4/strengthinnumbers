@@ -1,4 +1,5 @@
 var express = require('express');
+var router = express.Router();
 
 var Player = require('../models/player');
 
@@ -23,3 +24,5 @@ function seedPlayers() {
 }
 
 seedPlayers();
+
+module.exports = router;

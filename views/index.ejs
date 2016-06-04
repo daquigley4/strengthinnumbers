@@ -3,10 +3,15 @@
   <head>
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <base href="/">
   </head>
-  <body>
+  <body ng-controller="playersCtrl as ctrl">
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
+
+    <ul>
+      <li ng-repeat="movie in ctrl.movies">{{ player.name }} - {{ player.age }}</li>
+    </ul>
 
     <script type="text/javascript" src="angular/angular.min.js" defer></script>
     <script type="text/javascript" src="angular-ui-router/release/angular-ui-router.min.js" defer></script>
