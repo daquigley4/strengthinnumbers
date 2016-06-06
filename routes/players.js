@@ -12,7 +12,7 @@ function seedPlayers() {
       height: '6-8',
       weight: '250 lbs' ,
       photo: 'lebron.jpg',
-      postiton: 'Forward',
+      position: 'Forward',
       gp: 76,
       ppg: 25.3,
       apg: 6.8,
@@ -46,7 +46,7 @@ function seedPlayers() {
       height: '6-9',
       weight: '240 lbs' ,
       photo: 'Durant.jpg',
-      postiton: 'Forward',
+      position: 'Forward',
       gp: 72,
       ppg: 28.2,
       apg: 5.0,
@@ -80,7 +80,7 @@ function seedPlayers() {
       height: '6-3',
       weight: '190 lbs' ,
       photo: 'Curry.jpg',
-      postiton: 'Guard',
+      position: 'Guard',
       gp: 79,
       ppg: 30.1,
       apg: 6.7,
@@ -114,7 +114,7 @@ function seedPlayers() {
       height: '6-3',
       weight: '200 lbs' ,
       photo: 'Westbrook.jpg',
-      postiton: 'Guard',
+      position: 'Guard',
       gp: 80,
       ppg: 23.5,
       apg: 10.4,
@@ -148,7 +148,7 @@ function seedPlayers() {
       height: '6-9',
       weight: '220 lbs' ,
       photo: 'george.jpg',
-      postiton: 'Forward',
+      position: 'Forward',
       gp: 81,
       ppg: 23.1,
       apg: 4.1,
@@ -182,7 +182,7 @@ function seedPlayers() {
       height: '6-7',
       weight: '230 lbs' ,
       photo: 'kawhi.jpg',
-      postiton: 'Forward',
+      position: 'Forward',
       gp: 72,
       ppg: 21.2,
       apg: 2.6,
@@ -208,42 +208,7 @@ function seedPlayers() {
       efgpct: '56.5%',
       tspct: '61.6%',
       astpct: '12.2%',
-      pie: 17.0   },
-
-    { name: 'James Harden',
-      team: 'Houston Rockets',
-      age: 26,
-      height: '6-5',
-      weight: '220 lbs' ,
-      photo: 'harden.jpg',
-      postiton: 'Guard',
-      gp: 82,
-      ppg: 29.0,
-      apg: 7.5,
-      reb: 6.1,
-      dreb: 5.3,
-      oreb: 0.8,
-      fgpct: '43.9%',
-      fta: 10.2,
-      ftpct: '86.0%',
-      threepat: 8.0,
-      threeppct: '35.9%',
-      threepmade: 2.9,
-      stl: 1.7,
-      blk:  0.6,
-      plusminus: 1.5,
-      turnov: 4.6,
-      fga: 19.7,
-      fgm: 8.7,
-      min: 38.1,
-      offrtg: 107.2,
-      defrtg: 106.0,
-      astto: 1.64,
-      efgpct: '51.2%',
-      tspct: '59.8%',
-      astpct: '35.4%%',
-      pie: 17.4   },
-
+      pie: 17.0   }
 ];
 
   Player.find({}).remove()
@@ -256,7 +221,6 @@ function seedPlayers() {
   .then(function(found) {
     console.log('We saved and retrieved', found.length, 'players.');
   });
-
 }
 
 seedPlayers();
