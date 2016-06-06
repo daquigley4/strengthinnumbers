@@ -667,7 +667,7 @@ function seedPlayers() {
 
 seedPlayers();
 
-// INDEX Route
+//INDEX Route
 router.get('/', function(req, res, next) {
   Player.find({})
   .then(function(players) {
@@ -675,7 +675,7 @@ router.get('/', function(req, res, next) {
   });
 });
 
-// SHOW Route
+//SHOW Route
 router.get('/:id', function(req, res, next) {
   Player.findById(req.params.id)
   .then(function(movie) {
