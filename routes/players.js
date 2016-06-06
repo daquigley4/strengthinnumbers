@@ -240,6 +240,7 @@ function seedPlayers() {
       astpct: '35.4%%',
       pie: 17.4   }
 
+
 ];
 
   Player.find({}).remove()

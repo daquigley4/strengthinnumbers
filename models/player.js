@@ -8,6 +8,7 @@ var PlayerSchema = new mongoose.Schema({
   weight:    { type: String, requires: true },
   photo:     { type: String, requires: true },
   position:  { type: String, required: true },
+  gp:        { type: Number, required: true },
   ppg:       { type: Number, required: true },
   apg:       { type: Number, required: true },
   reb:       { type: Number, required: true },
@@ -32,7 +33,6 @@ var PlayerSchema = new mongoose.Schema({
   efgpct:    { type: String, required: true },
   tspct:     { type: String, required: true },
   astpct:    { type: String, required: true },
-  gp:        { type: Number, required: true },
   pie:       { type: Number, required: true }
 }, { timestamps: true } );
 
