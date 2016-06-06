@@ -113,7 +113,7 @@ function seedPlayers() {
       age: 27,
       height: '6-3',
       weight: '200 lbs' ,
-      photo: 'Westbrook.jpg',
+      photo: 'westbrook.jpg',
       position: 'Guard',
       gp: 80,
       ppg: 23.5,
