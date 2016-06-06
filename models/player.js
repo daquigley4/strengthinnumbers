@@ -7,9 +7,9 @@ var PlayerSchema = new mongoose.Schema({
   height:    { type: String, required: true },
   weight:    { type: String, requires: true },
   photo:     { type: String, requires: true },
-  postiton:  { type: String, required: true },
-  ppgkey:    { type: Number, required: true },
-  apgkey:    { type: String, required: true },
+  position:  { type: String, required: true },
+  ppg:       { type: Number, required: true },
+  apg:       { type: Number, required: true },
   reb:       { type: Number, required: true },
   dreb:      { type: Number, required: true },
   oreb:      { type: Number, required: true },
@@ -29,9 +29,10 @@ var PlayerSchema = new mongoose.Schema({
   offrtg:    { type: Number, required: true },
   defrtg:    { type: Number, required: true },
   astto:     { type: Number, required: true },
-  efgpct:    { type: Number, required: true },
+  efgpct:    { type: String, required: true },
   tspct:     { type: String, required: true },
   astpct:    { type: String, required: true },
+  gp:        { type: Number, required: true },
   pie:       { type: Number, required: true }
 }, { timestamps: true } );
 
