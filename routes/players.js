@@ -7,7 +7,7 @@ function seedPlayers() {
   var players = [
     { name: 'LeBron James',
       team: 'Cleveland Cavaliers',
-      age: 31 ,
+      age: 31,
       height: '6-8',
       weight: '250 lbs' ,
       photo: 'lebron.jpg',
@@ -107,12 +107,13 @@ function seedPlayers() {
       astpct: '31.5%',
       pie: 19.7   },
 
-    { name: 'Russell Westbrook',
+      {
+      name: 'Russell Westbrook',
       team: 'Oklahoma City Thunder',
       age: 27,
       height: '6-3',
-      weight: '200 lbs' ,
-      photo: 'Westbrook.jpg',
+      weight: '200 lbs',
+      photo: 'westbrook.jpg',
       postiton: 'Guard',
       gp: 80,
       ppg: 23.5,
@@ -127,7 +128,7 @@ function seedPlayers() {
       threeppct: '29.6%',
       threepmade: 1.3,
       stl: 2.0,
-      blk:  0.3,
+      blk: 0.3,
       plusminus: 7.9,
       turnov: 4.3,
       fga: 18.1,
@@ -136,12 +137,12 @@ function seedPlayers() {
       offrtg: 113.0,
       defrtg: 102.2,
       astto: 2.44,
-      efgpct: '48.9%',
+      efgpct:'48.9%',
       tspct: '55.4%',
       astpct: '46.8%',
-      pie: 18.8   },
+      pie: 18.8},
 
-  { name: 'Paul George',
+     {name:'Paul George',
       team: 'Indiana Pacers',
       age: 26,
       height: '6-9',
@@ -174,12 +175,11 @@ function seedPlayers() {
       tspct: '55.7%',
       astpct: '20.3%',
       pie: 15.1   },
-
-   { name: 'Kawhi Leonard',
+     {name: 'Kawhi Leonard',
       team: 'San Antonio Spurs',
       age: 24,
       height: '6-7',
-      weight: '230 lbs' ,
+      weight: '230 lbs',
       photo: 'kawhi.jpg',
       postiton: 'Forward',
       gp: 72,
@@ -204,16 +204,16 @@ function seedPlayers() {
       offrtg: 109.2,
       defrtg: 94.9,
       astto: 1.77,
-      efgpct: '56.5%',
-      tspct: '61.6%',
-      astpct: '12.2%',
-      pie: 17.0   },
+      efgpct:'56.5%',
+      tspct:'61.6%',
+      astpct:'12.2%',
+      pie: 17.0},
 
-    { name: 'James Harden',
+      {name: 'James Harden',
       team: 'Houston Rockets',
       age: 26,
       height: '6-5',
-      weight: '220 lbs' ,
+      weight: '220 lbs',
       photo: 'harden.jpg',
       postiton: 'Guard',
       gp: 82,
@@ -243,7 +243,7 @@ function seedPlayers() {
       astpct: '35.4%%',
       pie: 17.4   },
 
-    { name: 'Damian Lillard',
+      { name: 'Damian Lillard',
       team: 'Portland Trail Blazers',
       age: 25,
       height: '6-3',
@@ -651,7 +651,7 @@ function seedPlayers() {
       tspct: '57.8%',
       astpct: '29.3%',
       pie: 14.5 }
- ];
+]
 
   Player.find({}).remove()
   .then(function() {
