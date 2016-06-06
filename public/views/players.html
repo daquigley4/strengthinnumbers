@@ -1,7 +1,20 @@
 <h1>Players</h1>
 
-<ul>
-  <li ng-repeat="player in ctrl.players">
-    <a ng-click="ctrl.goShowPage(player)">{{ player._id }} : {{ player.name }} - {{ player.team }}</a>
-  </li>
-</ul>
+<p>
+<div class="dropdown1">
+  <select ng-model="ctrl.players" ng-options="player for player in ctrl.players">
+  </select>
+</div>
+
+<div class="dropdown2">
+  <button onclick="myFunction()" class="dropbtn">Player 2</button>
+  <div id="myDropdown" class="dropdown-content">
+    <ul>
+      <li ng-repeat="player in ctrl.players">
+        <a ng-click="ctrl.goShowPage(player)">{{ player.name }} - {{ player.team }}</a>
+      </li>
+    </ul>
+  </div>
+</div>
+</p>
+

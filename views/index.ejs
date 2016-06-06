@@ -6,14 +6,16 @@
     <base href="/">
   </head>
   <body ng-controller="playersCtrl as ctrl">
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-
-    <div style="border: solid 2px; padding: 5px;">
-      <h2>Nav Bar</h2>
-        <a ui-sref="home">Home</a>
-        <a ui-sref="players">Players</a>
-    </div>
+    <h1>Strength in Numbers</h1>
+    <div class="mdl-layout__drawer">
+    <span class="mdl-layout-title">Compare Players:</span>
+    <nav class="mdl-navigation">
+      <a class="mdl-navigation__link" ui-sref="home">Home</a>
+      <a class="mdl-navigation__link" ui-sref="players">Compare Players</a>
+      <a class="mdl-navigation__link" ui-sref="favorites">Favorite Players</a>
+      <a class="mdl-navigation__link">Link</a>
+    </nav>
+  </div>
 
     <div ui-view=""></div>
 
@@ -21,4 +23,5 @@
     <script type="text/javascript" src="angular-ui-router/release/angular-ui-router.min.js" defer></script>
     <script type="text/javascript" src="javascripts/client.js" defer></script>
   </body>
+
 </html>
