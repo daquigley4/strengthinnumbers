@@ -6,7 +6,7 @@ var Player = require('../models/player');
 function seedPlayers() {
 
   var players = [
-    { name: 'LeBron James',
+     {name: 'LeBron James',
       team: 'Cleveland Cavaliers',
       age: 31,
       height: '6-8',
@@ -40,8 +40,7 @@ function seedPlayers() {
       astpct: '33.9%',
       pie: 18.9},
 
-
-      {name: 'Kevin Durant',
+     {name: 'Kevin Durant',
       team: 'Oklahoma City Thunder',
       age: 27,
       height: '6-9',
@@ -74,7 +73,8 @@ function seedPlayers() {
       tspct: '63.4%',
       astpct: '23.0%',
       pie: 19.4   },
-      {name: 'Steph Curry',
+
+     {name: 'Steph Curry',
       team: 'Golden State Warriors',
       age: 28,
       height: '6-3',
@@ -107,7 +107,8 @@ function seedPlayers() {
       tspct: '66.9%',
       astpct: '31.5%',
       pie: 19.7   },
-      {name: 'Russell Westbrook',
+
+     {name: 'Russell Westbrook',
       team: 'Oklahoma City Thunder',
       age: 27,
       height: '6-3',
@@ -140,7 +141,8 @@ function seedPlayers() {
       tspct: '55.4%',
       astpct: '46.8%',
       pie: 18.8},
-      {name:'Paul George',
+
+     {name:'Paul George',
       team: 'Indiana Pacers',
       age: 26,
       height: '6-9',
@@ -173,7 +175,8 @@ function seedPlayers() {
       tspct: '55.7%',
       astpct: '20.3%',
       pie: 15.1   },
-      {name: 'Kawhi Leonard',
+
+     {name: 'Kawhi Leonard',
       team: 'San Antonio Spurs',
       age: 24,
       height: '6-7',
@@ -206,6 +209,7 @@ function seedPlayers() {
       tspct:'61.6%',
       astpct:'12.2%',
       pie: 17.0},
+
      {name: 'James Harden',
       team: 'Houston Rockets',
       age: 26,
@@ -238,8 +242,41 @@ function seedPlayers() {
       efgpct: '51.2%',
       tspct: '59.8%',
       astpct: '35.4%%',
-      pie: 17.4   }
+      pie: 17.4   },
 
+     {name: 'Damian Lillard',
+      team: 'Portland Trail Blazers',
+      age: 25,
+      height: '6-3',
+      weight: '195 lbs',
+      photo: 'lillard.jpq',
+      position: 'Guard',
+      gp: 75,
+      ppg: 25.1,
+      apg: 6.8,
+      reb: 4.0,
+      dreb: 3.4,
+      oreb: 0.6,
+      fgpct: '41.9%',
+      fta: 6.2,
+      ftpct: '89.2%',
+      threepat: 8.1,
+      threeppct: '37.5%',
+      threepmade: 3.1,
+      stl: 0.9,
+      blk: 0.4,
+      plusminus: 1.3,
+      turnov: 3.2,
+      fga: 19.7,
+      fgm: 8.2,
+      min: 35.7,
+      offrtg: 108.1,
+      defrtg: 107.3,
+      astto: 2.12,
+      efgpct: '49.7%',
+      tspct: '56.0%',
+      astpct: '33.0%',
+      pie: 14.3 }
 
 ];
 
