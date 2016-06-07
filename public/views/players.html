@@ -1,11 +1,11 @@
+
 <h1>Compare Players</h1>
 
+<div class="compare">
 <div class="dropdown1">
   <h3>Player 1</h3>
   <select ng-model="selectedPlayer1" ng-options="player.name for player in ctrl.player1">
-
-  </select>
-
+ </select>
   <p>Games Played: {{ selectedPlayer1.gp }}</p>
   <p>Points Per Game: {{ selectedPlayer1.ppg }}</p>
   <p>Assists Per Game: {{ selectedPlayer1.apg }}</p>
@@ -35,10 +35,10 @@
 </div>
 
 <div class="dropdown2">
+
   <h3>Player 2</h3>
   <select ng-model="selectedPlayer2" ng-options="player.name for player in ctrl.player2">
   </select>
-
     <p>Games Played: {{ selectedPlayer2.gp }}</p>
     <p>Points Per Game: {{ selectedPlayer2.ppg }}</p>
     <p>Assists Per Game: {{ selectedPlayer2.apg }}</p>
@@ -65,10 +65,8 @@
     <p>True Shooting Percentage: {{ selectedPlayer2.tspct }}</p>
     <p>Assist Percentage: {{ selectedPlayer2.astpct }}</p>
     <p>Player Impact Estimate: {{ selectedPlayer2.pie }}</p>
-
-
 </div>
-
+</div>
 
 
 
