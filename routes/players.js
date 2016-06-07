@@ -8,7 +8,7 @@ function seedPlayers() {
   var players = [
     { name: 'LeBron James',
       team: 'Cleveland Cavaliers',
-      age: 31 ,
+      age: 31,
       height: '6-8',
       weight: '250 lbs' ,
       photo: 'lebron.jpg',
@@ -38,9 +38,10 @@ function seedPlayers() {
       efgpct: '55.1%',
       tspct: '58.8%',
       astpct: '33.9%',
-      pie: 18.9    },
+      pie: 18.9},
 
-    { name: 'Kevin Durant',
+
+      {name: 'Kevin Durant',
       team: 'Oklahoma City Thunder',
       age: 27,
       height: '6-9',
@@ -73,8 +74,7 @@ function seedPlayers() {
       tspct: '63.4%',
       astpct: '23.0%',
       pie: 19.4   },
-
-    { name: 'Steph Curry',
+      {name: 'Steph Curry',
       team: 'Golden State Warriors',
       age: 28,
       height: '6-3',
@@ -107,12 +107,11 @@ function seedPlayers() {
       tspct: '66.9%',
       astpct: '31.5%',
       pie: 19.7   },
-
-    { name: 'Russell Westbrook',
+      {name: 'Russell Westbrook',
       team: 'Oklahoma City Thunder',
       age: 27,
       height: '6-3',
-      weight: '200 lbs' ,
+      weight: '200 lbs',
       photo: 'westbrook.jpg',
       position: 'Guard',
       gp: 80,
@@ -128,7 +127,7 @@ function seedPlayers() {
       threeppct: '29.6%',
       threepmade: 1.3,
       stl: 2.0,
-      blk:  0.3,
+      blk: 0.3,
       plusminus: 7.9,
       turnov: 4.3,
       fga: 18.1,
@@ -137,12 +136,11 @@ function seedPlayers() {
       offrtg: 113.0,
       defrtg: 102.2,
       astto: 2.44,
-      efgpct: '48.9%',
+      efgpct:'48.9%',
       tspct: '55.4%',
       astpct: '46.8%',
-      pie: 18.8   },
-
-  { name: 'Paul George',
+      pie: 18.8},
+      {name:'Paul George',
       team: 'Indiana Pacers',
       age: 26,
       height: '6-9',
@@ -175,12 +173,11 @@ function seedPlayers() {
       tspct: '55.7%',
       astpct: '20.3%',
       pie: 15.1   },
-
-    { name: 'Kawhi Leonard',
+      {name: 'Kawhi Leonard',
       team: 'San Antonio Spurs',
       age: 24,
       height: '6-7',
-      weight: '230 lbs' ,
+      weight: '230 lbs',
       photo: 'kawhi.jpg',
       position: 'Forward',
       gp: 72,
@@ -205,16 +202,51 @@ function seedPlayers() {
       offrtg: 109.2,
       defrtg: 94.9,
       astto: 1.77,
-      efgpct: '56.5%',
-      tspct: '61.6%',
-      astpct: '12.2%',
-      pie: 17.0   }
+      efgpct:'56.5%',
+      tspct:'61.6%',
+      astpct:'12.2%',
+      pie: 17.0},
+     {name: 'James Harden',
+      team: 'Houston Rockets',
+      age: 26,
+      height: '6-5',
+      weight: '220 lbs',
+      photo: 'harden.jpg',
+      position: 'Guard',
+      gp: 82,
+      ppg: 29.0,
+      apg: 7.5,
+      reb: 6.1,
+      dreb: 5.3,
+      oreb: 0.8,
+      fgpct: '43.9%',
+      fta: 10.2,
+      ftpct: '86.0%',
+      threepat: 8.0,
+      threeppct: '35.9%',
+      threepmade: 2.9,
+      stl: 1.7,
+      blk:  0.6,
+      plusminus: 1.5,
+      turnov: 4.6,
+      fga: 19.7,
+      fgm: 8.7,
+      min: 38.1,
+      offrtg: 107.2,
+      defrtg: 106.0,
+      astto: 1.64,
+      efgpct: '51.2%',
+      tspct: '59.8%',
+      astpct: '35.4%%',
+      pie: 17.4   }
+
+
 ];
 
   Player.find({}).remove()
   .then(function() {
     return Player.create(players);
-  })
+   })
   .then(function() {
     return Player.find({});
   })

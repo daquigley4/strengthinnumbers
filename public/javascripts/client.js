@@ -31,14 +31,20 @@ angular.module('strengthInNumbers')
 
   var ctrl = this;
 
-  ctrl.getPlayers = function() {
+  ctrl.getPlayer1 = function() {
     $http.get('/api/players').then(function(response) {
-      ctrl.players = response.data;
-      console.log('ctrl.players: ', ctrl.players)
+      ctrl.player1 = response.data;
+      console.log('ctrl.player1: ', ctrl.player1)
     });
   };
-
-  ctrl.getPlayers();
+  ctrl.getPlayer2 = function() {
+    $http.get('/api/players').then(function(response) {
+      ctrl.player2 = response.data;
+      console.log('ctrl.player2: ', ctrl.player2)
+    });
+  };
+  ctrl.getPlayer1();
+  ctrl.getPlayer2();
 });
 
 angular.module('strengthInNumbers')

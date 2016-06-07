@@ -2,17 +2,21 @@
 
 <div class="dropdown1">
   <h3>Player 1</h3>
-  <select ng-model="selectedPlayer" ng-options="player.name for player in ctrl.players">
+  <select ng-model="selectedPlayer1" ng-options="player.name for player in ctrl.player1">
+
   </select>
 
-  <p>Games Played: {{ selectedPlayer.gp }}</p>
+  <p>Games Played: {{ selectedPlayer1.gp }}</p>
 </div>
 
-<!-- <div class="dropdown2">
+<div class="dropdown2">
   <h3>Player 2</h3>
-  <select ng-model="ctrl.players" ng-options="player.name for player in ctrl.players">
+  <select ng-model="selectedPlayer2" ng-options="player.name for player in ctrl.player2">
   </select>
-</div> -->
+
+    <p>Games Played: {{ selectedPlayer2.gp }}</p>
+
+</div>
 
 
 
