@@ -11,10 +11,6 @@ angular.module('strengthInNumbers')
       url: "/",
       templateUrl: "views/home.html"
     })
-    .state('test', {
-      url: "/test",
-      templateUrl: "views/test.html"
-    })
     .state('players', {
       url: "/players",
       templateUrl: "views/players.html",
