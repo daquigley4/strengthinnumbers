@@ -1,50 +1,43 @@
 <!DOCTYPE html>
 <html ng-app="strengthInNumbers">
-  <head>
-    <title><%= title %></title>
+ <head>
+   <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
-    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.indigo-pink.min.css">
-    <script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script> -->
-    <base href="/">
-  </head>
-  <body ng-controller="playersCtrl as ctrl">
-   </html>
-<div class="demo-layout-transparent mdl-layout mdl-js-layout">
-  <header class="mdl-layout__header mdl-layout__header--transparent">
-    <div class="mdl-layout__header-row">
-      <!-- Title -->
-      <span class="mdl-layout-title">Strength In Numbers</span>
-      <!-- Add spacer, to align navigation to the right -->
-      <div class="mdl-layout-spacer"></div>
-      <!-- Navigation -->
-      <nav class="mdl-navigation">
-        <a class="mdl-navigation__link" href="">Home</a>
-        <a class="mdl-navigation__link" href="2">Player Compare</a>
-        <!-- <a class="mdl-navigation__link" href="3">Link</a>
-        <a class="mdl-navigation__link" href="4">Link</a> -->
-      </nav>
-    </div>
-  </header>
-  <div class="mdl-layout__drawer">
-    <span class="mdl-layout-title">Strength In Numbers</span>
-    <nav class="mdl-navigation">
-      <a class="mdl-navigation__link" ui-sref="home">Home</a>
-      <a class="mdl-navigation__link" ui-sref="players">Compare Players</a>
-      <a class="mdl-navigation__link" href="3">Link</a>
-      <a class="mdl-navigation__link" href="4">Link</a>
-    </nav>
-  </div>
-  <main class="mdl-layout__content">
-  </main>
+  <!--  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+   <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.indigo-pink.min.css">
+   <script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script> -->
+   <base href="/">
+ </head>
+ <body ng-controller="playersCtrl as ctrl">
+  </html>
+<div>
+ <header>
+   <div>
+     <!-- Title -->
+     <span>Strength In Numbers</span>
+     <!-- Add spacer, to align navigation to the right -->
+     <div></div>
+     <!-- Navigation -->
+   <nav >
+     <a  ui-sref="home">Home</a>
+     <a  ui-sref="players">Compare Players</a>
+     <a  ui-sref="test">Test</a>
+
+   </nav>
+   </div>
+ </header>
+
 </div>
 
 
-    <div ui-view=""></div>
-
-    <script type="text/javascript" src="angular/angular.min.js" defer></script>
-    <script type="text/javascript" src="angular-ui-router/release/angular-ui-router.min.js" defer></script>
-    <script type="text/javascript" src="javascripts/client.js" defer></script>
-  </body>
+   <div ui-view=""></div>
+   <script defer src="js/plugins.js"></script>
+    <script src="js/libs/d3.min.js"></script>
+   <script type="text/javascript" src="coffee/vis.js"></script>
+   <script type="text/javascript"></script>
+   <script type="text/javascript" src="angular/angular.min.js" defer></script>
+   <script type="text/javascript" src="angular-ui-router/release/angular-ui-router.min.js" defer></script>
+   <script type="text/javascript" src="javascripts/client.js" defer></script>
+ </body>
 
 </html>
