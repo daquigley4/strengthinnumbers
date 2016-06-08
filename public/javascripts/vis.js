@@ -229,8 +229,13 @@ root.plotData = function(selector, data, plot) {
 texts = [
   {
     key: "lebron",
-    file: "nba_players.csv",
+    file: "lebron_james.csv",
     name: "LeBron James"
+  },
+  {
+    key: "steph",
+    file: "steph_curry.csv",
+    name: "Steph Curry"
   }
 ];
 
