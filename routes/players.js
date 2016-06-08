@@ -305,7 +305,7 @@ router.get('/', function(req, res, next) {
 //SHOW Route
 router.get('/:id', function(req, res, next) {
   Player.findById(req.params.id)
-  .then(function(movie) {
+  .then(function(player) {
     if (!player) {
       res.status(404).json( { error: 'Not found' } )
     }
