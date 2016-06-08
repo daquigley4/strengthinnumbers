@@ -1,80 +1,158 @@
 <!DOCTYPE html>
 <html ng-app="strengthInNumbers">
-  <head>
-    <title><%= title %></title>
+
+<head>
+    <title>
+        <%= title %>
+    </title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel='stylesheet' href='/stylesheets/reset.css' />
     <link rel="stylesheet" href='/stylesheets/bootstrap.min.css' />
     <link rel='stylesheet' href='/stylesheets/style.css' />
-    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.indigo-pink.min.css">
-    <script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
     <base href="/">
-  </head>
-  <body ng-controller="playersCtrl as ctrl">
-   </html>
+</head>
+
+<body ng-controller="playersCtrl as ctrl">
+
+</html>
 <div>
-  <header>
-    <div>
-      <!-- Title -->
-      <span>Strength In Numbers</span>
-      <!-- Add spacer, to align navigation to the right -->
-      <div></div>
-      <!-- Navigation -->
-    <nav>
-      <a ui-sref="home">Home</a>
-      <a ui-sref="players">Compare Players</a>
-      <a ui-sref="test2">Test d3</a>
-    </nav>
-    </div>
-  </header>
-  <main>
-  </main>
-</div>
-
-
-<div id="container" class="container">
-      <select id="text-select">
-        <!-- <option value="sherlock">Sherlock Holmes</option>
+    <header>
+        <!-- Navigation -->
+        <nav class="navbar navbar-dark bg-inverse">
+            <a class="navbar-brand" ui-sref="home">Home</a>
+            <a class="navbar-brand" ui-sref="players">Compare Players</a>
+            <a class="navbar-brand" ui-sref="test2">Test d3</a>
+        </nav>
+        <span>Strength In Numbers</span>
+        <h1>Compare Players</h1>
+        <div id="container" class="container">
+            <select id="text-select">
+                <!-- <option value="sherlock">Sherlock Holmes</option>
         <option value="aesop">Aesop's Fables</option>
         <option value="alice">Alice in Wonderland</option> -->
-        <option value="steph">Steph Curry</option>
-        <option value="lebron">LeBron James</option>
-        <!-- <option>LeBron James's Stats</option> -->
-      </select>
-    <header>
-    <h1>Bubble Cloud</h1>
-      <h2 id="player-name" value="" ></h2>
-    </header>
-    <div id="main" role="main">
-      <div id="vis"></div>
-      <div id="status"></div>
-      <div id="controls">
-        <h3>Jitter</h3>
-        <form id="jitter" oninput="output.value = (jitter_input.value / 200).toFixed(3)" >
-          <input id="jitter_input" type="range" min="0" max="400" value="100" style="width:240px;">
-          <output name="output" for="input">0.5</output>
-        </form>
-      </div>
-
-
-    <div ui-view=""></div>
-
-    <script type="text/javascript">
-      console.log("it's alive");
-    </script>
-    <!-- <script>window.jQuery || document.write('<script src="javascripts/jquery-1.7.2.min.js"><\/script>')</script> -->
-    <script type="text/javascript" src="angular/angular.min.js" defer></script>
-    <script type="text/javascript" src="javascripts/jquery-1.7.2.min.js" defer></script>
-    <script type="text/javascript" src="javascripts/jquery-1.7.2.js" defer></script>
-    <script type="text/javascript" src="angular-ui-router/release/angular-ui-router.min.js" defer></script>
-    <script type="text/javascript" src="javascripts/plugins.js" defer></script>
-    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-    <!-- <script type="text/javascript" src="javascripts/d3.min.js" defer></script> -->
-    <script type="text/javascript" src="javascripts/client.js" defer></script>
-    <script type="text/javascript" src="javascripts/vis.js" defer></script>
-    <!-- <script type="text/javascript" src="javascripts/script.js" ></script> -->
-  </body>
+                <option value="steph">Steph Curry</option>
+                <option value="lebron">LeBron James</option>
+                <!-- <option>LeBron James's Stats</option> -->
+            </select>
+            <header>
+                <h1>Bubble Cloud</h1>
+                <h2 id="player-name"></h2>
+            </header>
+            <div id="main" role="main">
+                <div id="vis"></div>
+                <div id="status"></div>
+                <div id="controls">
+                    <h3>Jitter</h3>
+                    <form id="jitter" oninput="output.value = (jitter_input.value / 200).toFixed(3)">
+                        <input id="jitter_input" type="range" min="0" max="400" value="100" style="width:240px;">
+                        <output name="output" for="input">0.5</output>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="compare">
+            <div class="dropdown1">
+                <h3>Player 1</h3>
+                <select ng-model="selectedPlayer1" ng-options="player.name for player in ctrl.player1">
+                </select>
+                <div>
+                    <img src="public/images/{{ selectedPlayer1.photo }}" />
+                    <p>Name: {{ selectedPlayer1.name }}</p>
+                    <p>Team: {{ selectedPlayer1.team }}</p>
+                    <p>Height: {{ selectedPlayer1.height }}</p>
+                    <p>Weight: {{ selectedPlayer1.weight }}</p>
+                    <p>Position: {{ selectedPlayer1.position }}</p>
+                </div>
+                <!-- <p>Games Played: {{ selectedPlayer1.gp }}</p>
+  <p>Points Per Game: {{ selectedPlayer1.ppg }}</p>
+  <p>Assists Per Game: {{ selectedPlayer1.apg }}</p>
+  <p>Rebounds Per Game: {{ selectedPlayer1.reb }}</p>
+  <p>Defensive Rebounds Per Game: {{ selectedPlayer1.dreb }}</p>
+  <p>Offensive Rebounds Per Game: {{ selectedPlayer1.oreb }}</p>
+  <p>Field Goal Percentage: {{ selectedPlayer1.fgpct }}</p>
+  <p>Free Throws Attempted: {{ selectedPlayer1.fta }}</p>
+  <p>Free Throw Percentage: {{ selectedPlayer1.ftpct }}</p>
+  <p>Three Pointers Attempted: {{ selectedPlayer1.threepat }}</p>
+  <p>Three Pointer Percentage: {{ selectedPlayer1.threeppct }}</p>
+  <p>Three Pointers Made: {{ selectedPlayer1.threepmade }}</p>
+  <p>Steals Per Game: {{ selectedPlayer1.stl }}</p>
+  <p>Blocks Per Game: {{ selectedPlayer1.blk }}</p>
+  <p>Plus/Minus: {{ selectedPlayer1.plusminus }}</p>
+  <p>Turnovers Per Game: {{ selectedPlayer1.turnov }}</p>
+  <p>Field Goals Attempted: {{ selectedPlayer1.fga }}</p>
+  <p>Field Goals Made: {{ selectedPlayer1.fgm }}</p>
+  <p>Minutes Per Game: {{ selectedPlayer1.min }}</p>
+  <p>Offensive Rating: {{ selectedPlayer1.offrtg }}</p>
+  <p>Defensive Rating: {{ selectedPlayer1.defrtg }}</p>
+  <p>Assist/TO Ratio: {{ selectedPlayer1.astto }}</p>
+  <p>Effective Field Goal Percentage: {{ selectedPlayer1.efgpct }}</p>
+  <p>True Shooting Percentage: {{ selectedPlayer1.tspct }}</p>
+  <p>Assist Percentage: {{ selectedPlayer1.astpct }}</p>
+  <p>Player Impact Estimate: {{ selectedPlayer1.pie }}</p> -->
+            </div>
+            <div class="dropdown2">
+                <h3>Player 2</h3>
+                <select ng-model="selectedPlayer2" ng-options="player.name for player in ctrl.player2">
+                </select>
+                <div>
+                    <img src="public/images/{{ selectedPlayer2.photo }}" />
+                    <p>Name: {{ selectedPlayer2.name }}</p>
+                    <p>Team: {{ selectedPlayer2.team }}</p>
+                    <p>Height: {{ selectedPlayer2.height }}</p>
+                    <p>Weight: {{ selectedPlayer2.weight }}</p>
+                    <p>Position: {{ selectedPlayer2.position }}</p>
+                </div>
+                <!--  <p>Games Played: {{ selectedPlayer2.gp }}</p>
+    <p>Points Per Game: {{ selectedPlayer2.ppg }}</p>
+    <p>Assists Per Game: {{ selectedPlayer2.apg }}</p>
+    <p>Rebounds Per Game: {{ selectedPlayer2.reb }}</p>
+    <p>Defensive Rebounds Per Game: {{ selectedPlayer2.dreb }}</p>
+    <p>Offensive Rebounds Per Game: {{ selectedPlayer2.oreb }}</p>
+    <p>Field Goal Percentage: {{ selectedPlayer2.fgpct }}</p>
+    <p>Free Throws Attempted: {{ selectedPlayer2.fta }}</p>
+    <p>Free Throw Percentage: {{ selectedPlayer2.ftpct }}</p>
+    <p>Three Pointers Attempted: {{ selectedPlayer2.threepat }}</p>
+    <p>Three Pointer Percentage: {{ selectedPlayer2.threeppct }}</p>
+    <p>Three Pointers Made: {{ selectedPlayer2.threepmade }}</p>
+    <p>Steals Per Game: {{ selectedPlayer2.stl }}</p>
+    <p>Blocks Per Game: {{ selectedPlayer2.blk }}</p>
+    <p>Plus/Minus: {{ selectedPlayer2.plusminus }}</p>
+    <p>Turnovers Per Game: {{ selectedPlayer2.turnov }}</p>
+    <p>Field Goals Attempted: {{ selectedPlayer2.fga }}</p>
+    <p>Field Goals Made: {{ selectedPlayer2.fgm }}</p>
+    <p>Minutes Per Game: {{ selectedPlayer2.min }}</p>
+    <p>Offensive Rating: {{ selectedPlayer2.offrtg }}</p>
+    <p>Defensive Rating: {{ selectedPlayer2.defrtg }}</p>
+    <p>Assist/TO Ratio: {{ selectedPlayer2.astto }}</p>
+    <p>Effective Field Goal Percentage: {{ selectedPlayer2.efgpct }}</p>
+    <p>True Shooting Percentage: {{ selectedPlayer2.tspct }}</p>
+    <p>Assist Percentage: {{ selectedPlayer2.astpct }}</p>
+    <p>Player Impact Estimate: {{ selectedPlayer2.pie }}</p> -->
+            </div>
+        </div>
+</div>
+</header>
+<main>
+</main>
+</div>
+<br></br>
+<div ui-view=""></div>
+<script type="text/javascript">
+console.log("it's alive");
+</script>
+<!-- <script>window.jQuery || document.write('<script src="javascripts/jquery-1.7.2.min.js"><\/script>')</script> -->
+<script type="text/javascript" src="angular/angular.min.js" defer></script>
+<script type="text/javascript" src="javascripts/jquery-1.7.2.min.js" defer></script>
+<script type="text/javascript" src="javascripts/jquery-1.7.2.js" defer></script>
+<script type="text/javascript" src="angular-ui-router/release/angular-ui-router.min.js" defer></script>
+<script type="text/javascript" src="javascripts/plugins.js" defer></script>
+<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="javascripts/d3.min.js" defer></script>
+<script type="text/javascript" src="javascripts/client.js" defer></script>
+<script type="text/javascript" src="javascripts/vis.js" defer></script>
+<script type="text/javascript" src="javascripts/script.js"></script>
+</body>
 
 </html>

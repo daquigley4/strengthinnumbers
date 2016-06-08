@@ -1,7 +1,6 @@
+d3;
 var Bubbles, root, texts;
-
 root = typeof exports !== "undefined" && exports !== null ? exports : this;
-
 Bubbles = function() {
   var chart, clear, click, collide, collisionPadding, connectEvents, data, force, gravity, hashchange, height, idValue, jitter, label, margin, maxRadius, minCollisionRadius, mouseout, mouseover, node, rScale, rValue, textValue, tick, transformData, update, updateActive, updateLabels, updateNodes, width;
   width = 980;
@@ -16,9 +15,9 @@ Bubbles = function() {
     left: 0
   };
   maxRadius = 65;
-  rScale = d3.scale.sqrt().range([30, maxRadius]);
+  rScale = d3.scale.sqrt().range([5, maxRadius]);
   rValue = function(d) {
-    return d.number;
+    return (d.number);
   };
   idValue = function(d) {
     return d.name;
@@ -31,7 +30,7 @@ Bubbles = function() {
   jitter = 0.5;
   transformData = function(rawData) {
     rawData.forEach(function(d) {
-      d.number = parseInt(d.number);
+      d.count = parseInt(d.count);
       return rawData.sort(function() {
         return 0.5 - Math.random();
       });
@@ -106,7 +105,7 @@ Bubbles = function() {
       return rValue(d);
     });
     label.style("font-size", function(d) {
-      return Math.max(8, rScale(rValue(d) / 10)) + "px";
+      return Math.max(8, rScale(rValue(d) / 5)) + "px";
     }).style("width", function(d) {
       return 2.5 * rScale(rValue(d)) + "px";
     });
@@ -177,9 +176,9 @@ Bubbles = function() {
       return id === idValue(d);
     });
     if (id.length > 0) {
-      return d3.select("#status").html("<h3>The word <span class=\"active\">" + id + "</span> is now active</h3>");
+      return d3.select("#status").html("<h3>The stat <span class=\"active\">" + id + "</span> is now active</h3>");
     } else {
-      return d3.select("#status").html("<h3>No word is active</h3>");
+      return d3.select("#status").html("<h3>No stat is active</h3>");
     }
   };
   mouseover = function(d) {
@@ -221,11 +220,9 @@ Bubbles = function() {
   };
   return chart;
 };
-
 root.plotData = function(selector, data, plot) {
   return d3.select(selector).datum(data).call(plot);
 };
-
 texts = [
   {
     key: "lebron",
@@ -238,7 +235,6 @@ texts = [
     name: "Steph Curry"
   }
 ];
-
 $(function() {
   var display, key, plot, text;
   plot = Bubbles();
@@ -264,3 +260,4 @@ $(function() {
   d3.select("#player-name").html(text.name);
   return d3.csv("data/" + text.file, display);
 });
+
