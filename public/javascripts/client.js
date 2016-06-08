@@ -26,6 +26,12 @@ angular.module('strengthInNumbers')
       templateUrl: "views/favorites.html",
       controller: "favoritesCtrl",
       controllerAs: "ctrl"
+    })
+    .state('test2', {
+      url: "/test2",
+      templateUrl: "views/test2.html",
+      controller: "test2Ctrl",
+      controllerAs: "ctrl"
     });
 });
 
@@ -66,3 +72,12 @@ angular.module('strengthInNumbers')
 
   ctrl.getFavPlayers();
 });
+
+angular.module('strengthInNumbers')
+.controller('test2Ctrl', function($http) {
+  console.log('test2Ctrl is alive!');
+
+  var ctrl = this;
+
+});
+
