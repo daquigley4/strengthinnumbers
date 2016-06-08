@@ -228,7 +228,7 @@ root.plotData = function(selector, data, plot) {
 
 texts = [
   {
-    key: "nba",
+    key: "lebron",
     file: "nba_players.csv",
     name: "LeBron James"
   }
@@ -256,6 +256,6 @@ $(function() {
     location.replace("#");
     return location.search = encodeURIComponent(key);
   });
-  d3.select("#book-title").html(text.name);
+  d3.select("#player-name").html(text.name);
   return d3.csv("data/" + text.file, display);
 });
