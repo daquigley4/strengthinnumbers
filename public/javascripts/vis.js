@@ -30,7 +30,7 @@ Bubbles = function() {
   jitter = 0.5;
   transformData = function(rawData) {
     rawData.forEach(function(d) {
-      d.count = parseInt(d.count);
+      d.count = parseInt(d.number);
       return rawData.sort(function() {
         return 0.5 - Math.random();
       });
