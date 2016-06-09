@@ -333,7 +333,6 @@ router.get('/', function(req, res, next) {
   Player.find({})
   .then(function(players) {
     res.json(players);
-    res.render(players);
   });
 });
 

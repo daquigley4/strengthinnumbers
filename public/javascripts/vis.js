@@ -30,7 +30,7 @@ Bubbles = function() {
   jitter = 0.5;
   transformData = function(rawData) {
     rawData.forEach(function(d) {
-      d.count = parseInt(d.count);
+      d.number = parseInt(d.number);
       return rawData.sort(function() {
         return 0.5 - Math.random();
       });
@@ -260,4 +260,8 @@ $(function() {
   d3.select("#player-name").html(text.name);
   return d3.csv("data/" + text.file, display);
 });
+
+// if (key === "steph") {
+//     d3.selectAll(".bubble-node").style("fill", "blue");
+//   }
 
