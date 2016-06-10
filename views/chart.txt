@@ -1,0 +1,34 @@
+function pushPlayer(player, color, mult) {
+    $scope.data.push({
+      key: player.name,
+      color: color,
+      values: [
+        { label: "PPG", value: mult * player.ppg },
+        { label: "APG", value: mult * player.apg },
+        { label: "REB", value: mult * player.reb },
+        { label: "GP",  value: mult * player.gp},
+        { label: "OREB", value: mult * player.oreb},
+        { label: "DREB", value: mult * player.dreb},
+        { label: "FG%", value: mult * player.fgpct},
+        { label: "FTA", value: mult * player.fta},
+        { label: "FT%", value: mult * player.ftpct},
+        { label: "3PAT", value: mult * player.threepat},
+        { label: "3P%", value: mult * player.threeppct},
+        { label: "3PM", value: mult * player.threepmade},
+        { label: "STL", value: mult * player.stl},
+        { label: "BLK", value: mult * player.blk},
+        { label: "+/-", value: mult * player.plusminus},
+        { label: "TRNV", value: mult * player.turnov},
+        { label: "FGA", value: mult * player.fga},
+        { label: "FGM", value: mult * player.fgm},
+        { label: "MIN", value: mult * player.min},
+        { label: "ORATING", value: mult * player.offrtg},
+        { label: "DRATING", value: mult * player.defrtg},
+        { label: "AST/TO", value: mult * player.astto},
+        { label: "EFG%", value: mult * player.efgpct},
+        { label: "TS%", value: mult * player.tspct},
+        { label: "AST%", value: mult * player.astpct},
+        { label: "PIE", value: mult * player.pie}
+        ]
+    });
+  }

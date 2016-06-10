@@ -1,26 +1,41 @@
-.strength {
-  text-align: center;
-  padding-top: 40px;
+#david {
+  border-radius: 25px;
+}
+
+#chris {
+  border-radius: 25px;
 }
 
 
+
+#home-image{
+  border-radius: 25px;
+}
+#bar {
+  background: black;
+}
+
+h1{
+  text-align: center;
+}
+.strength {
+ text-align: center;
+ padding-top: 50px;
+
+}
+
 .dropdown1 {
-   padding-left: 200px;
-   margin: auto;
-   float: left;
-   width: 50%;
- },
+width: 50%;
+float: left;
+padding-left: 150px;
+text-align: center;
+}
 
 .dropdown2 {
-  margin: auto;
-
-  width: 50%;
-},
-
-
-.compare {
-
-margin: auto;
+float: right;
+width: 50%;
+text-align: center;
+padding-right: 150px;
 }
 
 #vis {
@@ -65,7 +80,6 @@ a.bubble-label {
   line-height: 1em;
   position: absolute;
 }
-
 
 .bubble-label .bubble-label-value {
   font: 11px sans-serif;
