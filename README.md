@@ -4,14 +4,11 @@
 A web application built with MongoDB, Express.js, Angular.js, Node.js, D3.js, and Angular-nvD3.js that helps you settle bar fights over who the best NBA player is with visualized stats!
 
 #### Features:
-##### Create your personal list of kravings:
-- Krave comes with a list where you can keep track of what you're kraving, whether it be donuts, hamburgers, or a juicy steak!  You can always edit and remove kravings depending on what you're feeling at the moment.
+##### Visual Comparison of Stats with Chart:
+- Select 2 NBA players and compare their stats in a chart.
 
-##### Search for the perfect place that will satisfy your kraving:
+##### View Basic info of :
 - You can click on your kraving and it will search based on your specified location for all the places where you can potentially satisfy your kraving.  After you see your list of places, you can click on it and get the details you want to help you decide where to go!
-
-##### Save your favorite places:
-- Found a place that always satisfies your kraving? You can save it in your FAVs list! You can keep track of your favorites spots to visit as well as save spots that you may want to try out in the future.
 
 #### Planning:
 
