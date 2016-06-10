@@ -1,4 +1,4 @@
-angular.module('strengthInNumbers', ['ui.router']);
+angular.module('strengthInNumbers', ['ui.router', 'nvd3']);
 
 angular.module('strengthInNumbers')
 .config(function($stateProvider, $urlRouterProvider, $locationProvider) {
@@ -14,55 +14,96 @@ angular.module('strengthInNumbers')
     .state('players', {
       url: "/players",
       templateUrl: "views/players.html",
-      controller: "playersCtrl",
-      controllerAs: "ctrl"
+      controller: "chartCtrl"
+    })
+    .state('chart', {
+      url: "/chart",
+      templateUrl: "views/chart.html",
+      controller: "chartCtrl"
+    })
+    .state('about', {
+      url: "/about",
+      templateUrl: "views/about.html"
 
     });
 });
 
+/*
 angular.module('strengthInNumbers')
-.controller('playersCtrl', function($http) {
+.controller('playersCtrl', function($scope, $http) {
   console.log('playersCtrl is alive!');
 
-  var ctrl = this;
-
-  ctrl.getPlayer1 = function() {
+  $scope.getPlayer1 = function() {
     $http.get('/api/players').then(function(response) {
-      ctrl.player1 = response.data;
-      console.log('ctrl.player1: ', ctrl.player1)
+      $scope.player1 = response.data;
+      console.log('$scope.player1: ', $scope.player1)
     });
   };
-  ctrl.getPlayer2 = function() {
+  $scope.getPlayer2 = function() {
     $http.get('/api/players').then(function(response) {
-      ctrl.player2 = response.data;
-      console.log('ctrl.player2: ', ctrl.player2)
+      $scope.player2 = response.data;
+      console.log('$scope.player2: ', $scope.player2)
     });
   };
-  ctrl.getPlayer1();
-  ctrl.getPlayer2();
+  $scope.getPlayer1();
+  $scope.getPlayer2();
 });
+*/
 
 angular.module('strengthInNumbers')
-.controller('favoritesCtrl', function($http) {
-  console.log('favoritesCtrl is alive!');
+.controller('chartCtrl', function($scope, $http) {
 
-  var ctrl = this;
-
-  ctrl.getFavPlayers = function() {
+  $scope.getPlayers = function() {
     $http.get('/api/players').then(function(response) {
-      ctrl.players = response.data;
-      console.log('ctrl.players: ', ctrl.players)
+      $scope.players = response.data;
+      console.log('$scope.players: ', $scope.players);
+      $scope.updateChart();
     });
   };
 
-  ctrl.getFavPlayers();
+  $scope.getPlayers();
+
+  $scope.options = {
+            chart: {
+                type: 'multiBarHorizontalChart',
+                height: 450,
+                x: function(d){return d.label;},
+                y: function(d){return d.value;},
+                showControls: true,
+                showValues: true,
+                duration: 500,
+                xAxis: {
+                    showMaxMin: false
+                },
+                yAxis: {
+                    axisLabel: 'Values',
+                    tickFormat: function(d){
+                        return d3.format(',.2f')(d);
+                    }
+                }
+            }
+        };
+
+  $scope.data = [];
+  $scope.player1Index = 0;
+  $scope.player2Index = 1;
+
+  function pushPlayer(player, color, mult) {
+    $scope.data.push({
+      key: player.name,
+      color: color,
+      values: [
+        { label: "PPG", value: mult * player.ppg },
+        { label: "APG", value: mult * player.apg },
+        { label: "REB", value: mult * player.reb }
+      ]
+    });
+  }
+
+  $scope.updateChart = function() {
+    var colors = [ "#d62728", "#1f77b4" ];
+    $scope.data.length = 0;
+    pushPlayer($scope.players[$scope.player1Index], colors[0], 1);
+    pushPlayer($scope.players[$scope.player2Index], colors[1], 1);
+  }
 });
-
-angular.module('strengthInNumbers')
-.controller('test2Ctrl', function($http) {
-  console.log('test2Ctrl is alive!');
-
-  var ctrl = this;
-
-});
-

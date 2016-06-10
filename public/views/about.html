@@ -1,47 +1,27 @@
-
-
-  <div id="container" class="container">
-      <select id="text-select">
-        <!-- <option value="sherlock">Sherlock Holmes</option>
-        <option value="aesop">Aesop's Fables</option>
-        <option value="alice">Alice in Wonderland</option>
-        <option value="gulliver">Gulliver's Travels</option> -->
-    <!--     <option value="nba">LeBron James's Stats</option>
-      </select>
-    <header>
-    <h1>Bubble Cloud</h1>
-    <h2>The most frequently used words in:</h2>
-      <h2 id="book-title"></h2>
-    </header>
-    <div id="main" role="main">
-      <div id="vis"></div>
-      <div id="status"></div>
-      <div id="controls">
-        <h3>Jitter</h3>
-        <form id="jitter" oninput="output.value = (jitter_input.value / 200).toFixed(3)" >
-          <input id="jitter_input" type="range" min="0" max="400" value="100" style="width:240px;">
-          <output name="output" for="input">0.5</output>
-        </form>
+<h1>Team Info</h1>
+      <div class="space">
+      <div class="compare">
+        <div class="dropdown1">
+          <h3>Player 1</h3>
+          <div>
+            <img src="/images/{{selectedPlayer1.photo}}" />
+            <p>Name: {{ selectedPlayer1.name }}</p>
+            <p>Team: {{ selectedPlayer1.team }}</p>
+            <p>Height: {{ selectedPlayer1.height }}</p>
+            <p>Weight: {{ selectedPlayer1.weight }}</p>
+            <p>Position: {{ selectedPlayer1.position }}</p>
+          </div>
+        </div>
+        <div class="dropdown2">
+          <h3>Player 2</h3>
+          <div>
+            <img src="/images/david.jpg" />
+            <p>Name: {{ selectedPlayer2.name }}</p>
+            <p>Team: {{ selectedPlayer2.team }}</p>
+            <p>Height: {{ selectedPlayer2.height }}</p>
+            <p>Weight: {{ selectedPlayer2.weight }}</p>
+            <p>Position: {{ selectedPlayer2.position }}</p>
+          </div>
+        </div>
       </div>
     </div>
-    <footer>
-    </footer>
-  </div> <!--! end of #container -->
- -->
-
-  <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script> -->
-  <script>window.jQuery || document.write('<script src="javascripts/jquery-1.7.2.min.js"><\/script>')</script>
-
-
-  <!-- <script defer src="js/plugins.js"></script>
-  <script src="js/libs/coffee-script.js"></script> -->
-  <!-- <script src="javascripts/d3.min.js"></script> -->
-
-
-
-  <!--[if lt IE 7 ]>
-    <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
-    <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
-  <![endif]-->
-
-

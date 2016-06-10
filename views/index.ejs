@@ -2,17 +2,21 @@
 <html ng-app="strengthInNumbers">
 
 <head>
-  <title>
-    <%= title %>
-  </title>
-  <link rel='stylesheet' href='/stylesheets/style.css' />
-  <link rel='stylesheet' href='/stylesheets/reset.css' />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
-  <link rel='stylesheet' href='/stylesheets/bootstrap.min.css' />
-  <base href="/">
+
+    <title>
+        <%= title %>
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel='stylesheet' href='/stylesheets/reset.css' />
+    <link rel="stylesheet" href='/stylesheets/bootstrap.min.css' />
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+    <base href="/">
+
 </head>
 
-<body ng-controller="playersCtrl as ctrl">
+<body ng-controller="chartCtrl">
 
 </html>
 <div>
@@ -25,8 +29,10 @@
       <nav class="navbar navbar-dark bg-inverse">
         <a class="navbar-brand" ui-sref="home">Home</a>
         <a class="navbar-brand" ui-sref="players">Compare Players</a>
-        <!--   <a class="navbar-brand" ui-sref="test2">Test d3</a> -->
+        <a class="navbar-brand" ui-sref="chart">Chart</a>
+        <a class="navbar-brand" ui-sref="about">About</a>
       </nav>
+      <span>Strength In Numbers</span>
 
 
   </header>
@@ -34,6 +40,7 @@
   </main>
 </div>
 <div ui-view=""></div>
+
 <script type="text/javascript">
 console.log("it's alive");
 </script>
@@ -41,7 +48,6 @@ console.log("it's alive");
 <script type="text/javascript" src="javascripts/jquery-1.7.2.min.js" defer></script>
 <script type="text/javascript" src="javascripts/jquery-1.7.2.js" defer></script>
 <script type="text/javascript" src="angular-ui-router/release/angular-ui-router.min.js" defer></script>
-<script type="text/javascript" src="javascripts/plugins.js" defer></script>
 <script src="http://d3js.org/d3.v3.min.js" charset="utf-8" defer></script>
 <script type="text/javascript" src="javascripts/d3.min.js" defer></script>
 <script type="text/javascript" src="nvd3/build/nv.d3.js" defer></script>

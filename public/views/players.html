@@ -1,43 +1,44 @@
 <h1>Player Info</h1>
 
+      <div class="space">
       <div class="compare">
         <div class="dropdown1">
           <h3>Player 1</h3>
-          <select ng-model="selectedPlayer1" ng-options="player.name for player in ctrl.player1">
+          <select ng-model="player1Index" ng-change="updateChart()" ng-options="players.indexOf(player1Index) as player1Index.name for player1Index in players">
           </select>
           <div>
-            <img src="/images/{{selectedPlayer1.photo}}" />
-            <p>Name: {{ selectedPlayer1.name }}</p>
-            <p>Team: {{ selectedPlayer1.team }}</p>
-            <p>Height: {{ selectedPlayer1.height }}</p>
-            <p>Weight: {{ selectedPlayer1.weight }}</p>
-            <p>Position: {{ selectedPlayer1.position }}</p>
+            <img src="/images/{{player1Index.photo}}" />
+            <p>Name: {{ player1Index.name }}</p>
+            <p>Team: {{ player1Index.team }}</p>
+            <p>Height: {{ player1Index.height }}</p>
+            <p>Weight: {{ player1Index.weight }}</p>
+            <p>Position: {{ player1Index.position }}</p>
+
           </div>
         </div>
         <div class="dropdown2">
           <h3>Player 2</h3>
-          <select ng-model="selectedPlayer2" ng-options="player.name for player in ctrl.player2">
+
+          <select ng-model="player2Index" ng-change="updateChart()" ng-options="players.indexOf(player2Index) as player2Index.name for player2Index in players">
           </select>
           <div>
-            <img src="/images/{{ selectedPlayer2.photo }}" />
-            <p>Name: {{ selectedPlayer2.name }}</p>
-            <p>Team: {{ selectedPlayer2.team }}</p>
-            <p>Height: {{ selectedPlayer2.height }}</p>
-            <p>Weight: {{ selectedPlayer2.weight }}</p>
-            <p>Position: {{ selectedPlayer2.position }}</p>
+            <img src="/images/{{ player2Index.photo }}" />
+            <p>Name: {{ player2Index.name }}</p>
+            <p>Team: {{ player2Index.team }}</p>
+            <p>Height: {{ player2Index.height }}</p>
+            <p>Weight: {{ player2Index.weight }}</p>
+            <p>Position: {{ player2Index.position }}</p>
           </div>
         </div>
       </div>
+    </div>
 
 
-<h1>Stats</h1>
+<!-- <h1>Stats</h1>
 
 <div class="compare">
 <div class="dropdown1">
   <h3>Player 1</h3>
-  <!-- <select ng-model="selectedPlayer1" ng-options="player.name for player in ctrl.player1">
- </select> -->
-
   <p>Games Played: {{ selectedPlayer1.gp }}</p>
   <p>Points Per Game: {{ selectedPlayer1.ppg }}</p>
   <p>Assists Per Game: {{ selectedPlayer1.apg }}</p>
@@ -69,8 +70,6 @@
 <div class="dropdown2">
 
   <h3>Player 2</h3>
-  <!-- <select ng-model="selectedPlayer2" ng-options="player.name for player in ctrl.player2">
-  </select> -->
     <p>Games Played: {{ selectedPlayer2.gp }}</p>
     <p>Points Per Game: {{ selectedPlayer2.ppg }}</p>
     <p>Assists Per Game: {{ selectedPlayer2.apg }}</p>
@@ -98,7 +97,7 @@
     <p>Assist Percentage: {{ selectedPlayer2.astpct }}</p>
     <p>Player Impact Estimate: {{ selectedPlayer2.pie }}</p>
 </div>
-</div>
+</div> -->
 
 
 

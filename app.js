@@ -11,6 +11,9 @@ var users = require('./routes/users');
 var players = require('./routes/players');
 
 var app = express();
+// Connect To Database
+// var mongoUri = process.env.MONGODB_URI || 'mongodb://localhost/project4'
+// mongoose.connect(mongoUri);
 mongoose.connect('mongodb://localhost/strength-in-numbers');
 
 // view engine setup
