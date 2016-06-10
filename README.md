@@ -14,17 +14,17 @@ A web application built with MongoDB, Express.js, Angular.js, Node.js, D3.js, an
 
 Plan: 
 
-![Alt Image Text](krave_plan.jpg "Screenshot")
+![Alt Image Text](strength_in_numbers_plan.png "Screenshot")
 
 ERD: 
 
-![Alt Image Text](krave_erd.png)
+![Alt Image Text](strength_in_numbers_img.png)
 
 
 #### Issues:
 
-**Routing:**
-We ran into issues passing data pulled from the google maps API from one page to the next page.  Initially we tried to write the data to the database, but eventually went with passing the variables in the URL.
+**D3/Angular:**
+We ran into an issue getting angular and d3 to use the same set of players data to render the charts and dropdowns.  We installed angular-nvd3 to allow us 
 
 **Styling:**
 We didn't use a completely built out template to style our site so we had some difficulty positioning our navigation bar, logo, and footer exactly where we wanted.
@@ -40,13 +40,13 @@ We didn't use a completely built out template to style our site so we had some d
 
 #### Project Links:
 
-[MVP Wireframe](https://trello.com/c/IOnBtHHS/6-designing)
+[MVP Wireframe](https://trello.com/c/N18k61Fz/18-new-mockup-1-png)
 
 [Trello: User Stories](https://trello.com/b/6oJBfopN/project-3#)
 
 [GitHub: Strength in Numbers - repository](https://github.com/daquigley4/strengthinnumbers)
 
-[Heroku: Krave. - application](https://krave.herokuapp.com/)
+[Heroku: Strength in Numbers - application](https://strength-in-numbers.herokuapp.com/)
 
 ### Future Features:
 
