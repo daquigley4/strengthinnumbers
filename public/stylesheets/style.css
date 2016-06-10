@@ -6,11 +6,10 @@
   border-radius: 25px;
 }
 
-
-
 #home-image{
   border-radius: 25px;
 }
+
 #bar {
   background: black;
 }
@@ -22,6 +21,10 @@ h1{
  text-align: center;
  padding-top: 50px;
 
+}
+
+.player-select{
+  align-content: center;
 }
 
 .dropdown1 {
