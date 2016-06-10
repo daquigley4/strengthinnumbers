@@ -6,6 +6,7 @@
   border-radius: 25px;
 }
 
+
 /*#copyright {
     text-align: center;
     position: fixed;
@@ -45,9 +46,11 @@
   left:0;
 }
 
+
 #home-image{
   border-radius: 25px;
 }
+
 #bar {
   background: black;
 }
@@ -61,11 +64,16 @@ h1{
 
 }
 
+.player-select{
+  align-content: center;
+}
+
 .dropdown1 {
 width: 50%;
 float: left;
 padding-left: 150px;
 text-align: center;
+padding-bottom: 20px;
 }
 
 .dropdown2 {
@@ -73,6 +81,7 @@ float: right;
 width: 50%;
 text-align: center;
 padding-right: 150px;
+padding-bottom: 20px;
 }
 
 #vis {
