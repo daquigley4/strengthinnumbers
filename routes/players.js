@@ -676,18 +676,4 @@ router.get('/', function(req, res, next) {
   });
 });
 
-//SHOW Route
-router.get('/:id', function(req, res, next) {
-  Player.findById(req.params.id)
-  .then(function(player) {
-    if (!player) {
-      res.status(404).json( { error: 'Not found' } )
-    }
-    res.json(player);
-  })
-  .catch(function(err) {
-    return next(err);
-  });
-});
-
 module.exports = router;

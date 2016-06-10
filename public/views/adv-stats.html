@@ -1,0 +1,44 @@
+<h1>Advanced Stats</h1>
+
+<div>
+  <select ng-model="player1Index" ng-change="updateChart2()" ng-options="players.indexOf(player1Index) as player1Index.name for player1Index in players"></select>
+  <select ng-model="player2Index" ng-change="updateChart2()" ng-options="players.indexOf(player2Index) as player2Index.name for player2Index in players"></select>
+  <nvd3 options="options" data="data2"></nvd3>
+</div>
+
+<h1>Player Info</h1>
+
+      <div class="space">
+      <div class="compare">
+        <div class="dropdown1">
+          <h3>Player 1</h3>
+          <select ng-model="player1Index" ng-change="updateChart()" ng-options="player1Index.name for player1Index in players">
+          </select>
+          <!-- <select ng-model="player1Index" ng-change="updateChart()" ng-options="players.indexOf(player1Index) as player1Index.name for player1Index in players">
+          </select> -->
+          <div>
+            <img src="/images/{{player1Index.photo}}" />
+            <p>Name: {{ player1Index.name }}</p>
+            <p>Team: {{ player1Index.team }}</p>
+            <p>Height: {{ player1Index.height }}</p>
+            <p>Weight: {{ player1Index.weight }}</p>
+            <p>Position: {{ player1Index.position }}</p>
+          </div>
+        </div>
+        <div class="dropdown2">
+          <h3>Player 2</h3>
+          <select ng-model="player2Index" ng-change="updateChart()" ng-options="player2Index.name for player2Index in players">
+          </select>
+          <!-- <select ng-model="player2Index" ng-change="updateChart()" ng-options="players.indexOf(player2Index) as player2Index.name for player2Index in players">
+          </select> -->
+          <div>
+            <img src="/images/{{ player2Index.photo }}" />
+            <p>Name: {{ player2Index.name }}</p>
+            <p>Team: {{ player2Index.team }}</p>
+            <p>Height: {{ player2Index.height }}</p>
+            <p>Weight: {{ player2Index.weight }}</p>
+            <p>Position: {{ player2Index.position }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
