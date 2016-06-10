@@ -11,10 +11,11 @@ var users = require('./routes/users');
 var players = require('./routes/players');
 
 var app = express();
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/strength-in-numbers');
 // Connect To Database
 // var mongoUri = process.env.MONGODB_URI || 'mongodb://localhost/project4'
 // mongoose.connect(mongoUri);
-mongoose.connect('mongodb://localhost/strength-in-numbers');
+// mongoose.connect('mongodb://localhost/strength-in-numbers');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
