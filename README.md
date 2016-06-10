@@ -34,7 +34,7 @@ We ran into an issue getting angular and d3 to use the same set of data to rende
 Heroku was not able to install all our bower components, specifically the d3 and angular-nvd3 libraries.  We had to replace the script paths in our index page with URLs to their respective CDNs.
 
 #### Technologies Used:
-- HTML5, CSS3, JavaScript, MongoDB, Express.js, Angular.js, Node.js, D3.js, Angular-nvD3.js, Bootstrap, Heroku, mLaB
+- HTML5, CSS3, JavaScript, MongoDB, Express.js, Angular.js, Node.js, D3.js, Angular-nvD3.js, Bootstrap, Material Design Lite, Heroku, mLaB
 
 - Design: Wireframe(balsamiq), Draw.io
 
