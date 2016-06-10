@@ -32,6 +32,7 @@ width: 50%;
 float: left;
 padding-left: 150px;
 text-align: center;
+padding-bottom: 20px;
 }
 
 .dropdown2 {
@@ -39,6 +40,7 @@ float: right;
 width: 50%;
 text-align: center;
 padding-right: 150px;
+padding-bottom: 20px;
 }
 
 #vis {
