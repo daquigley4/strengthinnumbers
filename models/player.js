@@ -14,11 +14,11 @@ var PlayerSchema = new mongoose.Schema({
   reb:       { type: Number, required: true },
   dreb:      { type: Number, required: true },
   oreb:      { type: Number, required: true },
-  fgpct:     { type: String, required: true },
+  fgpct:     { type: Number, required: true },
   fta:       { type: Number, required: true },
-  ftpct:     { type: String, required: true },
+  ftpct:     { type: Number, required: true },
   threepat:  { type: Number, required: true },
-  threeppct: { type: String, required: true },
+  threeppct: { type: Number, required: true },
   threepmade:{ type: Number, required: true },
   stl:       { type: Number, required: true },
   blk:       { type: Number, required: true },
@@ -30,9 +30,9 @@ var PlayerSchema = new mongoose.Schema({
   offrtg:    { type: Number, required: true },
   defrtg:    { type: Number, required: true },
   astto:     { type: Number, required: true },
-  efgpct:    { type: String, required: true },
-  tspct:     { type: String, required: true },
-  astpct:    { type: String, required: true },
+  efgpct:    { type: Number, required: true },
+  tspct:     { type: Number, required: true },
+  astpct:    { type: Number, required: true },
   pie:       { type: Number, required: true }
 }, { timestamps: true } );
 

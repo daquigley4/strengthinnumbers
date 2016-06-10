@@ -1,3 +1,34 @@
+<h1>Player Info</h1>
+
+      <div class="compare">
+        <div class="dropdown1">
+          <h3>Player 1</h3>
+          <select ng-model="selectedPlayer1" ng-options="player.name for player in ctrl.player1">
+          </select>
+          <div>
+            <img src="/images/{{selectedPlayer1.photo}}" />
+            <p>Name: {{ selectedPlayer1.name }}</p>
+            <p>Team: {{ selectedPlayer1.team }}</p>
+            <p>Height: {{ selectedPlayer1.height }}</p>
+            <p>Weight: {{ selectedPlayer1.weight }}</p>
+            <p>Position: {{ selectedPlayer1.position }}</p>
+          </div>
+        </div>
+        <div class="dropdown2">
+          <h3>Player 2</h3>
+          <select ng-model="selectedPlayer2" ng-options="player.name for player in ctrl.player2">
+          </select>
+          <div>
+            <img src="/images/{{ selectedPlayer2.photo }}" />
+            <p>Name: {{ selectedPlayer2.name }}</p>
+            <p>Team: {{ selectedPlayer2.team }}</p>
+            <p>Height: {{ selectedPlayer2.height }}</p>
+            <p>Weight: {{ selectedPlayer2.weight }}</p>
+            <p>Position: {{ selectedPlayer2.position }}</p>
+          </div>
+        </div>
+      </div>
+
 
 <h1>Stats</h1>
 

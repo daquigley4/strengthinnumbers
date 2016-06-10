@@ -16,18 +16,7 @@ angular.module('strengthInNumbers')
       templateUrl: "views/players.html",
       controller: "playersCtrl",
       controllerAs: "ctrl"
-    })
-    .state('favorites', {
-      url: "/favorites",
-      templateUrl: "views/favorites.html",
-      controller: "favoritesCtrl",
-      controllerAs: "ctrl"
-    })
-    .state('test2', {
-      url: "/test2",
-      templateUrl: "views/test2.html",
-      controller: "test2Ctrl",
-      controllerAs: "ctrl"
+
     });
 });
 
