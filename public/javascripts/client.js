@@ -108,6 +108,7 @@ angular.module('strengthInNumbers')
         { label: "3PM", value: mult * player.threepmade}
       ]
     });
+    console.log($scope.data);
   }
 
   function pushAdvStats(player, color, mult) {
