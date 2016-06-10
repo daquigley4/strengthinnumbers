@@ -24,7 +24,6 @@ angular.module('strengthInNumbers')
     .state('about', {
       url: "/about",
       templateUrl: "views/about.html"
-
     });
 });
 
