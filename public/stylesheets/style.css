@@ -20,18 +20,20 @@
 }*/
 
 #wrapper {
-  height:100%;
-  position:relative;
-  margin: 0 auto -20px;  /* the bottom margin is the negative value of the footer's height */
+  height: 100%;
+  position: relative;
+  margin: 0 auto -20px;
+  /* the bottom margin is the negative value of the footer's height */
 }
 
 .wrapper {
-  min-height:100%;
-  position:relative;
+  min-height: 100%;
+  position: relative;
 }
 
 .content {
-  padding-bottom:20px; /* Height of the footer element */
+  padding-bottom: 20px;
+  /* Height of the footer element */
 }
 
 .copyright {
@@ -39,15 +41,14 @@
   text-align: center;
   background: black;
   background-size: cover;
-  width:100%;
-  height:20px;
-  position:absolute;
-  bottom:0;
-  left:0;
+  width: 100%;
+  height: 20px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 
-
-#home-image{
+#home-image {
   border-radius: 25px;
 }
 
@@ -55,33 +56,33 @@
   background: black;
 }
 
-h1{
+h1 {
   text-align: center;
 }
-.strength {
- text-align: center;
- padding-top: 50px;
 
+.strength {
+  text-align: center;
+  padding-top: 50px;
 }
 
-.player-select{
+.player-select {
   align-content: center;
 }
 
 .dropdown1 {
-width: 50%;
-float: left;
-padding-left: 150px;
-text-align: center;
-padding-bottom: 20px;
+  width: 50%;
+  float: left;
+  padding-left: 150px;
+  text-align: center;
+  padding-bottom: 20px;
 }
 
 .dropdown2 {
-float: right;
-width: 50%;
-text-align: center;
-padding-right: 150px;
-padding-bottom: 20px;
+  float: right;
+  width: 50%;
+  text-align: center;
+  padding-right: 150px;
+  padding-bottom: 20px;
 }
 
 #vis {
