@@ -1,17 +1,14 @@
 <h1>Traditional Stats</h1>
 <div>
- <div class="dropdown1">
-  <select ng-model="player1Index" ng-change="updateChart1()" ng-options="players.indexOf(player1Index) as player1Index.name for player1Index in players"></select>
+  <div class="dropdown1">
+    <select ng-model="player1Index" ng-change="updateChart1()" ng-options="players.indexOf(player1Index) as player1Index.name for player1Index in players"></select>
   </div>
   <div class="dropdown2">
-  <select ng-model="player2Index" ng-change="updateChart1()" ng-options="players.indexOf(player2Index) as player2Index.name for player2Index in players"></select>
+    <select ng-model="player2Index" ng-change="updateChart1()" ng-options="players.indexOf(player2Index) as player2Index.name for player2Index in players"></select>
   </div>
 </div>
   <nvd3 options="options" data="data"></nvd3>
-
-
-
-      <div class="space">
+    <div class="space">
       <div class="compare">
         <div class="dropdown1">
           <h3>{{ players[player1Index].name}}</h3>
@@ -38,9 +35,8 @@
       </div>
     </div>
   </div>
-
-
-
+</div>
+</div>
 <!-- <h1>Stats</h1>
 
 <div class="compare">
