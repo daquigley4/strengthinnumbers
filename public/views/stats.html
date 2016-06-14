@@ -10,33 +10,44 @@
   <nvd3 options="options" data="data"></nvd3>
     <div class="space">
       <div class="compare">
-        <div class="dropdown1">
-          <h3>{{ players[player1Index].name}}</h3>
 
-          <div>
-            <img src="{{players[player1Index].photo}}" />
-            <p>Team: {{ players[player1Index].team }}</p>
-            <p>Height: {{ players[player1Index].height }}</p>
-            <p>Weight: {{ players[player1Index].weight }}</p>
-            <p>Position: {{ players[player1Index].position }}</p>
+        <div class="player-profile1">
+              <div class="player-name">
+                    <h3>{{ players[player1Index].name}}</h3>
+              </div>
+                  <div class="player-card">
+                    <div class="player-photo" id="player-photo-left">
+                        <img src="{{players[player1Index].photo}}" />
+                    </div>
+                    <div class="player-info">
+                        <p>Team: {{ players[player1Index].team }}</p>
+                        <p>Height: {{ players[player1Index].height }}</p>
+                        <p>Weight: {{ players[player1Index].weight }}</p>
+                        <p>Position: {{ players[player1Index].position }}</p>
+                    </div>
+                </div>
           </div>
-        </div>
-        <div class="dropdown2">
-          <h3>{{ players[player2Index].name }}</h3>
 
-          <div>
-            <img src="{{ players[player2Index].photo }}" />
-            <p>Team: {{ players[player2Index].team }}</p>
-            <p>Height: {{ players[player2Index].height }}</p>
-            <p>Weight: {{ players[player2Index].weight }}</p>
-            <p>Position: {{ players[player2Index].position }}</p>
-          </div>
+
+
+        <div class="player-profile2">
+              <div class="player-name">
+                  <h3>{{ players[player2Index].name }}</h3>
+              </div>
+              <div class="player-card">
+                  <div class="player-photo" id="player-photo-right">
+                      <img src="{{ players[player2Index].photo }}" />
+                  </div>
+                  <div class="player-info">
+                      <p>Team: {{ players[player2Index].team }}</p>
+                      <p>Height: {{ players[player2Index].height }}</p>
+                      <p>Weight: {{ players[player2Index].weight }}</p>
+                      <p>Position: {{ players[player2Index].position }}</p>
+                  </div>
+              </div>
         </div>
       </div>
     </div>
-  </div>
-</div>
-</div>
 <!-- <h1>Stats</h1>
 
 <div class="compare">

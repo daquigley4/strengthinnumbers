@@ -6,7 +6,6 @@
   border-radius: 25px;
 }
 
-
 /*#copyright {
     text-align: center;
     position: fixed;
@@ -84,6 +83,46 @@ h1 {
   padding-right: 150px;
   padding-bottom: 20px;
 }
+
+
+.compare{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+}
+
+.player-profile1{
+  margin: auto;
+  width:40%;
+  text-align: center;
+}
+
+.player-profile2{
+  margin: auto;
+  width:40%;
+  text-align: center;
+}
+
+.player-photo{
+  float: left;
+}
+
+#player-photo-right{
+}
+
+#player-photo-left{
+}
+
+.player-card{
+  background-color: gray;
+  height: 200px;
+  padding-top: 10px;
+  border-radius: 25px;
+}
+
 
 #vis {
   overflow: hidden;
