@@ -1,9 +1,12 @@
 #david {
-  border-radius: 25px;
+  margin: 15px 15px;
+  border-radius: 15px;
+
 }
 
 #chris {
-  border-radius: 25px;
+  margin: 15px 15px;
+  border-radius: 15px;
 }
 
 /*#copyright {
@@ -48,7 +51,7 @@
 }
 
 #home-image {
-  border-radius: 25px;
+  border-radius: 15px;
 }
 
 #bar {
@@ -65,7 +68,12 @@ h1 {
 }
 
 .player-select {
+  text-align: center;
   align-content: center;
+}
+
+.page-title{
+  text-align: center;
 }
 
 .dropdown1 {
@@ -107,7 +115,9 @@ h1 {
 }
 
 .player-photo{
+  margin-right: 60px;
   float: left;
+  padding-left: 15px;
 }
 
 #player-photo-right{
@@ -116,11 +126,35 @@ h1 {
 #player-photo-left{
 }
 
-.player-card{
-  background-color: gray;
+.player-info{
+  padding-top: 18px;
+  text-align: left;
+  font-size: 18px;
+}
+
+.about-info{
+  text-align: left;
+  font-size: 18px;
+}
+
+.player-info-text{
+  font-size: 18px;
+}
+
+.player1-card{
+  background-color: rgba(214, 39, 40, 0.8);
   height: 200px;
   padding-top: 10px;
-  border-radius: 25px;
+  border-radius: 15px;
+  color: white;
+}
+
+.player2-card{
+  background-color: rgba(31, 119, 180, 0.8);
+  height: 200px;
+  padding-top: 10px;
+  border-radius: 15px;
+  color: white;
 }
 
 
