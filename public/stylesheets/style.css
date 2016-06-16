@@ -9,7 +9,7 @@
   border-radius: 15px;
 }
 
-/*#copyright {
+#copyright {
     text-align: center;
     position: fixed;
     bottom: 0;
@@ -19,7 +19,7 @@
     background-size: cover;
     border: 1px solid #000;
     color: white;
-}*/
+}
 
 #wrapper {
   height: 100%;

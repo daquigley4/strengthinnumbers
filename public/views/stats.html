@@ -1,52 +1,52 @@
 <h2 class="page-title">Traditional Stats</h2>
-<div class="player-select">
-  <h4>Select Players:</h4>
-  <div class="dropdown1">
-    <select ng-model="player1Index" ng-change="updateChart1()" ng-options="players.indexOf(player1Index) as player1Index.name for player1Index in players"></select>
+  <div class="player-select">
+    <h4>Select Players:</h4>
+    <div class="dropdown1">
+      <select ng-model="player1Index" ng-change="updateChart1()" ng-options="players.indexOf(player1Index) as player1Index.name for player1Index in players"></select>
+    </div>
+    <div class="dropdown2">
+      <select ng-model="player2Index" ng-change="updateChart1()" ng-options="players.indexOf(player2Index) as player2Index.name for player2Index in players"></select>
+    </div>
   </div>
-  <div class="dropdown2">
-    <select ng-model="player2Index" ng-change="updateChart1()" ng-options="players.indexOf(player2Index) as player2Index.name for player2Index in players"></select>
-  </div>
-</div>
   <nvd3 options="options" data="data"></nvd3>
-    <div class="space">
-      <div class="compare">
+  <div class="space">
+    <div class="compare">
 
-        <div class="player-profile1">
-          <div class="player-name">
-            <h3>{{ players[player1Index].name}}</h3>
-          </div>
-            <div class="player1-card">
-              <div class="player-photo">
-                <img src="{{players[player1Index].photo}}" />
-              </div>
-              <div class="player-info">
-                <p class="player-info-text">Team: {{ players[player1Index].team }}</p>
-                <p class="player-info-text">Height: {{ players[player1Index].height }}</p>
-                <p class="player-info-text">Weight: {{ players[player1Index].weight }}</p>
-                <p class="player-info-text">Position: {{ players[player1Index].position }}</p>
-              </div>
-            </div>
+      <div class="player-profile1">
+        <div class="player-name">
+          <h3>{{ players[player1Index].name}}</h3>
         </div>
-
-        <div class="player-profile2">
-          <div class="player-name">
-            <h3>{{ players[player2Index].name }}</h3>
+        <div class="player1-card">
+          <div class="player-photo">
+            <img src="{{players[player1Index].photo}}" />
           </div>
-            <div class="player2-card">
-              <div class="player-photo">
-                <img src="{{ players[player2Index].photo }}" />
-              </div>
-                <div class="player-info">
-                  <p class="player-info-text">Team: {{ players[player2Index].team }}</p>
-                  <p class="player-info-text">Height: {{ players[player2Index].height }}</p>
-                  <p class="player-info-text">Weight: {{ players[player2Index].weight }}</p>
-                  <p class="player-info-text">Position: {{ players[player2Index].position }}</p>
-                </div>
-              </div>
-            </div>
+          <div class="player-info">
+            <p class="player-info-text">Team: {{ players[player1Index].team }}</p>
+            <p class="player-info-text">Height: {{ players[player1Index].height }}</p>
+            <p class="player-info-text">Weight: {{ players[player1Index].weight }}</p>
+            <p class="player-info-text">Position: {{ players[player1Index].position }}</p>
           </div>
         </div>
+      </div>
+
+      <div class="player-profile2">
+        <div class="player-name">
+          <h3>{{ players[player2Index].name }}</h3>
+        </div>
+        <div class="player2-card">
+          <div class="player-photo">
+            <img src="{{ players[player2Index].photo }}" />
+          </div>
+          <div class="player-info">
+            <p class="player-info-text">Team: {{ players[player2Index].team }}</p>
+            <p class="player-info-text">Height: {{ players[player2Index].height }}</p>
+            <p class="player-info-text">Weight: {{ players[player2Index].weight }}</p>
+            <p class="player-info-text">Position: {{ players[player2Index].position }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 <!-- <h1>Stats</h1>
 
 <div class="compare">
